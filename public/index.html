@@ -9,7 +9,11 @@
     </head>
     <body>
         <form id="form" action="/search" method="get">
-          <input id='input' type="text" onclick="this.value=''" name="URL" value="https://www.youtube.com/watch?v=moHc1eRVshU">
+            <input id='input' type="text" onclick="this.value=''" name="Q" value="https://www.youtube.com/watch?v=moHc1eRVshU">
+            <input type="radio" name='TYPE' value='mp4'>
+            <label for="mp4">mp4</label>
+            <input type="radio" name='TYPE' value='mp3'>
+            <label for="mp3">mp3</label>
             <button type="submit" id="button">submit</button>
         </form>
         <div id='root'>

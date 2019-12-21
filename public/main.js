@@ -10,7 +10,7 @@ $(document).on('submit', '#form', function(e){
 function Submit(input, t) {
     $.ajax({
         type:'GET',
-        url:`search?URL=${input}`,
+        url:`search?Q=${input}&TYPE='hello'`,
         processData: false,
         async: true,
         cache: false,

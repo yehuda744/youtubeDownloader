@@ -16,13 +16,17 @@ app.get('/', (req, res) => {
 // step three: res.send that profile picture
 app.get('/search', (req, res) => {
     // makes a new variable from the input and u write .search because the object we sent from main was called search and it had the input in it
-    var search = req.query.URL;
+    var search = req.query.Q;
+    var type = req.query.TYPE;
+    console.log(req.query);
     console.log(search);
+    console.log(type);
 
-    res.header('Content-Disposition', 'attachment; filename="video.mp4"');
+
+    res.header('Content-Disposition', `attachment; filename=video.${type}`);
 
     ytdl(search, {
-        format: 'mp4'
+        format: type
     }).pipe(res);
 });
 
